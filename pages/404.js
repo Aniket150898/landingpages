@@ -1,0 +1,61 @@
+import React from 'react'
+import Link from "next/link";
+import {useRouter} from "next/router";
+const errorpage = () => {
+  const router = useRouter();
+
+  const handleInput = () => {
+    router.push("/");
+  };
+  
+  return (
+    <>
+           <nav>
+        <ul className="menu-bar">
+          <li>
+            <Link href="/">
+              <a> Home </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog">
+              <a> Blogs </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/product">
+              <a> Products </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/about">
+              <a> About Us </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact">
+              <a> Conatact Us </a>
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      <div id="notfound">
+        <div className="notfound">
+          <div className="notfound-404">
+            <h1>404</h1>
+          </div>
+          <h2>We are sorry, Page not found!</h2>
+          <p>
+            The page you are looking for might have been removed had its name
+            changed or is temporarily unavailable.
+          </p>
+
+          <a onClick={handleInput}>Back To Homepage</a>
+        </div>
+      </div>
+
+    </>
+  )
+}
+
+export default errorpage
