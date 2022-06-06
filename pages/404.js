@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from "next/link";
 import {useRouter} from "next/router";
-const errorpage = () => {
+const Errorpage = () => {
   const router = useRouter();
 
   const handleInput = () => {
@@ -58,4 +58,4 @@ const errorpage = () => {
   )
 }
 
-export default errorpage
+export default Errorpage;
